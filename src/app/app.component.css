@@ -1,0 +1,311 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+nav{
+  text-align: right;
+  padding: 30px 50px 0 0;
+  background-color: rgba(255, 255, 255, 0.774);
+  height: 90px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.9);
+}
+.logo{
+  font-weight: bold;
+  color: rgb(1, 93, 155);
+}
+
+nav > a{
+  color: rgb(87, 83, 83);
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 18px; /*dá um espaço entre os href*/
+}
+li .nav-link{
+margin-top: 23px;
+}
+
+.conteudo-menu{
+  background-color: rgb(246, 246, 246);
+ margin: 0;
+ padding: 0;
+
+
+}
+.titulo-p{
+
+    color: rgb(1, 93, 155);
+
+}
+
+header{
+height: 240px;
+width: 100%;
+background-color: lightcoral;
+}
+.div-quem-somos{
+  max-width: 300px;
+  margin: 10px;
+  margin-left: 170px;
+}
+.div-quem-somos > p > span{
+  color: rgb(1, 93, 155);
+  font-weight: bold;
+}
+.div-quem-somos > p{
+font-size:17px;
+color:white;
+font-weight: lighter;
+}
+/*---------------------------------------FORM-------------------------------*/
+.inputs{
+  height: 35px;
+}
+.btn-enviar{
+  width: 100px;
+  height: 35px;
+}
+.box-form{
+ max-width: 400px;
+}
+.forms-div{
+
+  background-color: rgb(240, 238, 238);
+}
+/*---------------------------CSS A PARTIR DOS CARDS-----------------------------------*/
+.contenedor1{
+  widows: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.about-us{
+  background-color: rgb(240, 238, 238);
+}
+.contenedor-articulo{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-around;
+
+}
+
+.articulo{
+  width: 29%;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 10px 30px 6px 30px;
+  transition: 0.5s;
+}
+.articulo:hover{
+  box-shadow: 0px 4px 10px rgba(17, 29, 48, 0.26);
+}
+
+.articulo > img{
+ width: 57px;
+ height: auto;
+ padding-top: 0px;
+
+
+}
+/*
+.articulo>i{
+  font-size: 30px;
+  background-color: rgb(31, 193, 222);
+  color: white;
+  width: 70px;
+  height: 70px;
+  padding-top: 20px;
+  border-radius: 50%;
+
+  box-shadow: 0px 8px 32px rgba(31, 187, 222, 0.46);
+}*/
+
+.articulo > h3{
+  font-size: 24px;
+  margin-top: 30px;
+}
+.articulo > p{
+ color: rgb(146, 146, 146);
+ margin-top: 15px;
+}
+.articulo > a{
+  color:#44cdf0;
+  font-weight: 400;
+  text-decoration: none;
+}
+.articulo > a:hover{
+  color: #00a0c8;
+}
+
+/*questoes----------------???*/
+
+.questions{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.questions > img{
+   width: 550px;
+}
+.textos-questions{
+    margin: 0 0 0 30px;
+}
+.textos-questions p{
+  font-weight: 100;
+  margin-top: 14px;
+  color: rgb(122, 122, 121);
+}
+.textos-questions a{
+margin: 28px 0 0 0;
+width: 130px;
+display: inline-block;
+background-color: turquoise;
+text-align: center;
+color: white;
+text-transform: uppercase;
+border-radius: 5px;
+box-shadow: 0px 8px 32px rgba(31, 187, 222, 0.46);
+}
+/*----------BOTAO ID------------------------------------*/
+.btn-pegar-id{
+  color: #2a96b1;
+
+}
+
+/*-------------RESPOSTAS-----------------------------------*/
+.container-respostas > h3{
+  color: rgb(3, 69, 114);
+}
+.container-respostas{
+  margin-left: 170px;
+}
+.section-respostas{
+  /* margin-left: 170px; */
+  background-color: rgb(240, 238, 238);
+}
+
+.inputs-respostas{
+  height: 35px;
+  width: 200px;
+}
+
+.btn-enviar-r{
+  width: 100px;
+  height: 35px;
+  margin-left: 7px;
+}
+
+/*----------mediaquery---------------------*/
+
+@media screen and (max-width:800px){
+
+  .articulo{
+      width: 45%;
+  }
+
+}
+
+@media screen and (max-width:500px){
+
+  .contenedor-aside{
+      background-color: rgba(44, 97, 182, 0.178);
+      height: 300px;
+
+  }
+  .div-quem-somos{
+    max-width: 300px;
+    margin: 10px;
+    margin-left: 40px;
+  }
+
+
+  .titulo-p{
+    text-align: center;
+  }
+  .forms-div{
+   margin-left: 25px;
+   }
+}
+
+@media screen and (max-width:375px){
+
+.contenedor-aside{
+  height: 350px;
+  background-color: rgba(44, 97, 182, 0.178);
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+
+}
+
+.box-form{
+  width: 80%;
+}
+.forms-div{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.btn-enviar{
+  width: 290px;
+  margin-left: -100px;
+}
+.titulo-p{
+  text-align: center;
+}
+/*---responder---*/
+.container-respostas{
+  margin-left: 50px;
+
+}
+.forms-div-r{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+ }
+.section-respostas{
+
+  background-color: rgb(240, 238, 238);
+}
+.inputs-respostas{
+  height: 35px;
+  width: 90px;
+
+
+  margin-right: -200px;
+
+}
+
+
+.btn-enviar-r{
+  width: 310px;
+
+  margin-left: 0px;
+  margin-bottom: 15px;
+}
+
+/*-------*/
+
+aside > img{
+  display: none;
+}
+.articulo{
+  height: 200px;
+  width: 300px;
+  margin:40px;
+  overflow: scroll;
+}
+.articulo > h3{
+  font-size: 18px;
+}
+
+
+}

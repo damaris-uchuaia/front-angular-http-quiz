@@ -1,0 +1,98 @@
+
+  <app-header></app-header>
+
+ <!--  <h3>Nova Pergunta</h3>
+
+  <label for="title">
+    Título
+    <input type="text" [(ngModel)]="title" name="title" id="title">
+  </label>
+
+  <label for="body">
+    Conteúdo
+    <input type="text" [(ngModel)]="body" name="body" id="body">
+  </label>
+
+  <button (click)="saveQuestion()">Salvar</button>
+</div>
+ -->
+
+
+ <section id="about-us" class="about-us">
+  <div class="contenedor1">
+    <h2 class="titulo-p">Perguntas Frequentes</h2>
+
+
+
+<div class="row  forms-div">
+  <div class="col-4 mt-4  m-2 box-form">
+    <div class="input-group mb-3">
+      <span class="input-group-text p-1" id="basic-addon2">Assunto</span>
+      <input type="text" class="form-control inputs" [(ngModel)]="title" name="title" id="title">
+    </div>
+  </div>
+
+  <div class="col-4 mt-4 box-form" >
+    <div class="input-group mb-3">
+      <span class="input-group-text p-1" id="basic-addon2">Pergunte aqui:</span>
+      <input type="text" class="form-control inputs" [(ngModel)]="body" name="body" id="body">
+    </div>
+  </div>
+
+  <div class="col-3 m-2 mt-4"><button (click)="saveQuestion()" class="btn btn-success btn-enviar">Enviar</button></div>
+</div>
+
+
+<!-------------------------------CARDS E FORMULARIO-------------------------------------------->
+
+
+<div class="articulo anime_inicial" >
+
+<ul *ngIf="questionsList.length > 0">
+  <li style="list-style: none;" *ngFor="let q of questionsList">
+    <button class="btn btn-ligth btn-pegar-id" (click)="getQuestion(q.id)">Ler pergunta com o id {{ q.id }}</button>
+  </li>
+</ul>
+
+<div class="justify-content-center" *ngIf="question">
+  <h2 class=" p-2">{{ question.title }}</h2>
+  <p class=" pb-2">{{ question.body }}, {{ question.createdAt | date }}</p>
+
+
+  <ul>
+    <li style="list-style: none;" *ngFor="let answer of question.Answers">
+      Resposta: {{ answer.answer }}
+    </li>
+  </ul>
+  <button class="btn btn-success p-1" (click)="answerQuestion(question)">Responder Pergunta</button>
+
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-------------------------------RESPONDER-------------------------------------------->
+<section class="section-respostas">
+
+<div class="container-respostas" style=" background-color: rgb(240, 238, 238);">
+  <h3 class="mb-3">Responder Pergunta</h3>
+
+  <div class="row forms-div-r">
+    <div class="col-4">
+      <div class="input-group mb-3">
+      <span class="input-group-text p-1" id="basic-addon2">Responda aqui:</span>
+        <input class="form-control inputs-respostas" type="text" [(ngModel)]="answer" name="answer" id="answer" #input>
+      </div>
+    </div>
+
+  <div class="col-4">
+    <button class="btn btn-success btn-enviar-r" (click)="sendQuestionToDB()">Enviar</button>
+  </div>
+</div>
+</div>
+</section>
+
+<app-footer></app-footer>
